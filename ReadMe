@@ -1,0 +1,49 @@
+**Password Manager Backend Application**
+
+The backend nodejs application provides the CRUD APIs for the frontend application
+
+## Features
+
+1.Create a new Password Manager -- User can create new password managars and save it in mongo DB(Create Operation)
+Password Manager contains Website Name, User Name, Password, Website Url
+Here the Password is encrypted and then stored in mongo db
+
+2.Read Password Manager -- User can retrive the passwords which is saved in mongo DB (Read Operation)
+
+3.Update Password Manager -- User can update their username and password for password managers
+
+4.Delete Password Manager -- User can delete their password manager from mongo DB
+
+## Project setup
+
+--Get into backend folder
+cd backend
+
+--Install packages
+npm install
+
+## DataBase setup
+
+DataBase used: MongoDB Atlas
+Create a .env file in the backend folder
+Add the required credentials in .env
+required credentials fields are DB_USERNAME, DB_PASSWORD, PORT
+DB_USERNAME -- mongo db username
+DB_PASSWORD -- mongo db password
+PORT -- 8080 #Here the port has to be 8080 since the client is listening for port no 8080
+
+Create an account in MongoDB Atlas and get the valid Credentials username and password
+
+## Command for running the server
+
+npm run server.js
+app starts listening in the given port(8080)
+
+## Project Folder Structure
+
+server.js -- main js file which is responsible configuration and listening the server
+src -- important folder which contains all the src code files
+model.js -- file responsible for creating models and schema
+route.js -- file responsible for route matching
+controller.js -- important file where the logic for the CURD operation is written
+encrypt-decrypt.js -- file responsible for encrypting and decrypting the passwords
